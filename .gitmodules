@@ -1,0 +1,7 @@
+[submodule "stratos"]
+	path = stratos
+	url = https://github.com/GarySmith/stratos.git
+	branch = argo-dashboard
+[submodule "argo-ui"]
+	path = argo-ui
+	url = https://github.com/argoproj/argo-ui

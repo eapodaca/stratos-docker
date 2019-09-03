@@ -1,0 +1,17 @@
+version: '2.3'
+services:
+
+  app:
+    build:
+      context: ./stratos
+      dockerfile: deploy/Dockerfile.all-in-one
+    environment:
+      UAA_ENDPOINT: http://uaa:8080
+      CONSOLE_CLIENT: admin
+      CONSOLE_CLIENT_SECRET: notchangeme
+      CONSOLE_ADMIN_SCOPE: stratos.admin
+    ports:
+      - 4443:443
+  uaa:
+    image: splatform/stratos-uaa
+
